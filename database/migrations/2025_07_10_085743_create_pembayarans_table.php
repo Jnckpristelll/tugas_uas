@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('id_pemesanan'); // Belum ada relasi foreign key
             $table->date('tgl_pembayaran');
-            $table->string('status');
+            $table->enum('status', ['pending', 'berhasil']);
             $table->timestamps();
         });
     }

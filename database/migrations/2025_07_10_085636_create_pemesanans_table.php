@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('id_pelanggan'); // Belum ada relasi foreign key
             $table->date('tanggal');
-            $table->string('status_dp');
-            $table->time('durasi_jam');
+            $table->enum('status_dp', ['sudah dibayar', 'belum dibayar']);
+            $table->string('durasi_jam');
             $table->time('jam_mulai');
             $table->time('jam_selesai');
             $table->timestamps();

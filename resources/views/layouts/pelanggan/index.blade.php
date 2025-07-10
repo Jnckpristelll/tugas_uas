@@ -77,7 +77,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                                 Yakin ingin menghapus pelanggan
-                                                                <strong>{{ $data->nama }}</strong>?
+                                                                <strong>{{ $data->nama_pelanggan }}</strong>?
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-secondary"
