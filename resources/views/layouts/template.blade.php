@@ -40,7 +40,7 @@
             <!-- LOGO -->
             <div class="topbar-left">
                 <div class="text-center">
-                    <a href="index.html" class="logo"><i class="mdi mdi-assistant"></i> Annex</a>
+                    <a href="index.html" class="logo"><i class="mdi mdi-assistant"></i> Ramnee Sportifa </a>
                     <!-- <a href="index.html" class="logo"><img src="assets/images/logo.png" height="24" alt="logo"></a> -->
                 </div>
             </div>
@@ -275,9 +275,6 @@
                                 <div class="page-title-box">
                                     <div class="btn-group float-right">
                                         <ol class="breadcrumb hide-phone p-0 m-0">
-                                            <li class="breadcrumb-item"><a href="#">Annex</a></li>
-                                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                                            <li class="breadcrumb-item active">starter</li>
                                         </ol>
                                     </div>
                                     <h4 class="page-title">@yield('headline')</h4>
@@ -294,7 +291,7 @@
             </div> <!-- content -->
 
             <footer class="footer">
-                © 2018 Annex by Mannatthemes.
+                © Ramnee Sportifa.
             </footer>
 
         </div>
