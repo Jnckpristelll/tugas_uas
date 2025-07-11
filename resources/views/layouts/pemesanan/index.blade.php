@@ -87,6 +87,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                                 Yakin ingin menghapus data pemesanan ini?
+                                                                <strong>{{ $data->id_pelanggan }}</strong>?
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-secondary"

@@ -100,6 +100,7 @@ class PemesananController extends Controller
         //
         $pemesanan = Pemesanan::findOrFail($id);
         $pemesanan ->delete();
+        return redirect('/pemesanan')->with('success', 'Data berhasil dihapus');
 
     }
 }

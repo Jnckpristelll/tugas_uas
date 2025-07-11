@@ -36,14 +36,14 @@ class PembayaranController extends Controller
         $request->validate([
         'id_pemesanan' => 'required|integer',
         'tgl_pembayaran' => 'required|date',
-        'status' => 'required|in:pending,berhasil',
+        'status_pembayaran' => 'required|in:pending,lunas',
     ]);
 
     // Simpan data pembayaran
         $pembayaran = new Pembayaran;
         $pembayaran->id_pemesanan = $request->id_pemesanan;
         $pembayaran->tgl_pembayaran = $request->tgl_pembayaran;
-        $pembayaran->status = $request->status;
+        $pembayaran->status_pembayaran = $request->status_pembayaran;
         $pembayaran->save();
 
     // Redirect ke halaman index dengan pesan sukses
@@ -77,7 +77,7 @@ class PembayaranController extends Controller
         $pembayaran = Pembayaran::findOrFail($id);
         $pembayaran->id_pemesanan = $request->id_pemesanan;
         $pembayaran->tgl_pembayaran = $request->tgl_pembayaran;
-        $pembayaran->status = $request->status;
+        $pembayaran->status_pembayaran = $request->status_pembayaran;
         $pembayaran->save();
 
 return redirect('/pembayaran')->with('success', 'Data pembayaran berhasil diperbarui.');
@@ -91,5 +91,7 @@ return redirect('/pembayaran')->with('success', 'Data pembayaran berhasil diperb
         //
         $pembayaran = Pembayaran::findOrFail($id);
         $pembayaran->delete();
+
+        return redirect('/pembayaran')->with('success', 'Data berhasil dihapus');
     }
 }

@@ -24,21 +24,21 @@
                             <input type="number" name="id_pemesanan" id="id_pemesanan" class="form-control" placeholder="Masukkan ID Pemesanan" required>
                         </div>
 
-
-
                         <div class="mb-3">
                             <label for="tgl_pembayaran" class="form-label">Tanggal Pembayaran</label>
                             <input type="date" name="tgl_pembayaran" id="tgl_pembayaran" class="form-control" required>
                         </div>
 
                         <div class="mb-3">
-                            <label for="status" class="form-label">Status Pembayaran</label>
-                            <select name="status" id="status" class="form-select" required>
+                            <label for="status_pembayaran" class="form-label">Status Pembayaran</label>
+                            <select name="status_pembayaran" id="status_pembayaran" class="form-select" required>
                                 <option value="" selected disabled>Pilih status</option>
+                                <option value="lunas">Lunas</option>
                                 <option value="pending">Pending</option>
-                                <option value="berhasil">Berhasil</option>
+
                             </select>
                         </div>
+
 
                         <button type="submit" class="btn btn-primary">
                             <i class="fa fa-plus"></i> Tambah Pembayaran

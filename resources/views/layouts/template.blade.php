@@ -97,12 +97,12 @@
                         <ul class="list-inline float-right mb-0">
                             <!-- language-->
                             <li class="list-inline-item dropdown notification-list hide-phone">
-                                <a class="nav-link dropdown-toggle arrow-none waves-effect text-white"
+                                {{-- <a class="nav-link dropdown-toggle arrow-none waves-effect text-white"
                                     data-toggle="dropdown" href="#" role="button" aria-haspopup="false"
                                     aria-expanded="false">
                                     English <img src="assets/images/flags/us_flag.jpg" class="ml-2" height="16"
                                         alt="" />
-                                </a>
+                                </a> --}}
                                 <div class="dropdown-menu dropdown-menu-right language-switch">
                                     <a class="dropdown-item" href="#"><img
                                             src="assets/images/flags/italy_flag.jpg" alt=""
@@ -316,6 +316,8 @@
 
     <!-- App js -->
     <script src="{{ asset('assets/js/app.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

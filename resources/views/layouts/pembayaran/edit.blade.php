@@ -32,11 +32,11 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="status" class="form-label">Status Pembayaran</label>
-                            <select class="form-select" name="status" id="status" required>
-                                <option disabled selected>Pilih Status</option>
-                                <option value="pending" {{ $pembayaran->status == 'pending' ? 'selected' : '' }}>Pending</option>
-                                <option value="berhasil" {{ $pembayaran->status == 'berhasil' ? 'selected' : '' }}>Berhasil</option>
+                            <label for="status_pembayaran" class="form-label">Status Pembayaran</label>
+                            <select class="form-select" name="status_pembayaran" id="status_pembayaran" required>
+                                <option disabled selected>Pilih Status Pembayaran</option>
+                                <option value="pending" {{ $pembayaran->status_pembayaran == 'pending' ? 'selected' : '' }}>Pending</option>
+                                <option value="lunas" {{ $pembayaran->status_pembayaran == 'lunas' ? 'selected' : '' }}>Lunas</option>
                             </select>
                         </div>
 

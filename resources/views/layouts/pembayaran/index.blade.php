@@ -44,10 +44,10 @@
                                         <td>{{ $data->id_pemesanan }}</td>
                                         <td>{{ $data->tgl_pembayaran }}</td>
                                         <td>
-                                            @if ($data->status == 'berhasil')
-                                                <span class="badge bg-success">{{ $data->status }}</span>
+                                            @if ($data->status_pembayaran == 'lunas')
+                                                <span class="badge bg-success">{{ $data->status_pembayaran }}</span>
                                             @else
-                                                <span class="badge bg-warning text-dark">{{ $data->status }}</span>
+                                                <span class="badge bg-warning text-dark">{{ $data->status_pembayaran }}</span>
                                             @endif
                                         </td>
 
@@ -84,6 +84,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                                 Yakin ingin menghapus data pembayaran ini?
+                                                                <strong>{{ $data->id_pemesanan }}</strong>?
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-secondary"

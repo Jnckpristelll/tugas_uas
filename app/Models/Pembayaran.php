@@ -11,7 +11,7 @@ class Pembayaran extends Model
     protected $fillable = [
         'id_pemesanan',
         'tgl_pembayaran',
-        'status',
+        'status_pembayaran',
 
     ];
 }

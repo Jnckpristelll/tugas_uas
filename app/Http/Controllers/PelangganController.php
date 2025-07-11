@@ -88,5 +88,7 @@ class PelangganController extends Controller
         // proses hapus
         $pelanggan = Pelanggan::findOrFail($id);
         $pelanggan->delete();
+
+        return redirect('/pelanggan')->with('success', 'Data berhasil dihapus');
     }
 }
