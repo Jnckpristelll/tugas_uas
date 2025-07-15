@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Pemesanan;
+use App\Models\Pelanggan;
 
 class PemesananController extends Controller
 {
@@ -24,7 +25,10 @@ class PemesananController extends Controller
     public function create()
     {
         //
-        return view('layouts.pemesanan.create');
+        // return view('layouts.pemesanan.create');
+
+        $pelanggan = Pelanggan::all(); // Untuk dropdown pelanggan
+        return view('layouts.pemesanan.create', compact('pelanggan'));
     }
 
     /**
@@ -34,7 +38,7 @@ class PemesananController extends Controller
     {
         //
         $request->validate([
-        'id_pelanggan' => 'required|integer',
+        'id_pelanggan' => 'required',
         'tanggal' => 'required|date',
         'status_dp' => 'required|in:sudah dibayar,belum dibayar',
         'durasi_jam' => 'required|string',
@@ -70,8 +74,9 @@ class PemesananController extends Controller
     public function edit(string $id)
     {
         //
+        $pelanggan = Pelanggan::all();
         $pemesanan = Pemesanan::find($id);
-        return view('layouts.pemesanan.edit',compact('pemesanan'));
+        return view('layouts.pemesanan.edit',compact('pemesanan', 'pelanggan'));
     }
 
     /**

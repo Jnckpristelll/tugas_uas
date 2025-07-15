@@ -11,6 +11,11 @@ class Pelanggan extends Model
     protected $fillable = [
         'nama_pelanggan',
         'no_hp',
-        'alamat_pelanggan',
+        'nama_tim',
     ];
+
+    public function pemesanan()
+    {
+        return $this->belongTo(Pemesanan::class);
+    }
 }

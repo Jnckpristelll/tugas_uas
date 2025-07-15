@@ -30,8 +30,8 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="alamat" class="form-label">Alamat</label>
-                            <textarea class="form-control" id="alamat" name="alamat_pelanggan" rows="3" required>{{ $pelanggan->alamat_pelanggan }}</textarea>
+                            <label for="nama_tim" class="form-label">Nama Tim</label>
+                            <textarea class="form-control" id="nama_tim" name="nama_tim" rows="3" required>{{ $pelanggan->nama_tim }}</textarea>
                         </div>
 
                         <div class="d-flex justify-content-between">

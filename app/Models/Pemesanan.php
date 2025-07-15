@@ -16,4 +16,9 @@ class Pemesanan extends Model
         'jam_mulai',
         'jam_selesai',
     ];
+
+     public function pelanggan()
+        {
+            return $this->hasOne(Pelanggan::class, 'id', 'id_pelanggan');
+        }
 }

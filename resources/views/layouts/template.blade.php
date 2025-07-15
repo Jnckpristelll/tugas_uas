@@ -56,8 +56,8 @@
                                 </a>
                             </li> --}}
 
-                        <li class="has_sub">
-                            <a href=""class="waves-effect"><i class="mdi mdi-layers"></i> <span>
+                        <li>
+                            <a href="{{ route('home') }}"class="waves-effect"><i class="mdi mdi-layers"></i> <span>
                                     Dashboard </span> <span class="float-right"></span></a>
                         </li>
 

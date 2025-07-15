@@ -44,7 +44,7 @@
                                 @forelse ($pemesanan as $data)
                                     <tr>
                                         <td>{{ $nomor++ }}</td>
-                                        <td>{{ $data->id_pelanggan }}</td>
+                                        <td>{{ $data->pelanggan->nama }}</td>
                                         <td>{{ $data->tanggal }}</td>
                                         <td>
                                             @if ($data->status_dp == 'sudah dibayar')

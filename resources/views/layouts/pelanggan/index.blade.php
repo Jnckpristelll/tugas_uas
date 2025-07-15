@@ -34,7 +34,7 @@
                                         <th class="text-center">No</th>
                                         <th class="text-center">Nama</th>
                                         <th class="text-center">No Handphone</th>
-                                        <th class="text-center">Alamat Pelanggan</th>
+                                        <th class="text-center">Nama Tim</th>
                                         <th class="text-center">Action</th>
                                     </tr>
                                 </thead>
@@ -44,7 +44,7 @@
                                             <td>{{ $nomor++ }}</td>
                                             <td>{{ $data->nama_pelanggan }}</td>
                                             <td>{{ $data->no_hp }}</td>
-                                            <td>{{ $data->alamat_pelanggan }}</td>
+                                            <td>{{ $data->nama_tim }}</td>
                                             <td>
                                                 <div class="btn-group" role="group">
                                                     <!-- Tombol Edit -->
@@ -58,7 +58,7 @@
                                                         data-bs-target="#modalHapus{{ $data->id }}" title="Hapus">
                                                         <i class="fa fa-trash"></i>
                                                     </button>
-                                                    
+
                                                     <!-- Modal Hapus -->
                                                     <div class="modal fade" id="modalHapus{{ $data->id }}"
                                                         tabindex="-1" aria-labelledby="modalLabel{{ $data->id }}"
@@ -91,8 +91,6 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <!-- End Modal -->
-
                                                     <!-- End Modal -->
                                                 </div>
                                             </td>

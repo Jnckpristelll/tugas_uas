@@ -36,12 +36,12 @@ class PelangganController extends Controller
         $request->validate([
         'nama_pelanggan' => 'required',
         'no_hp' => 'required',
-        'alamat_pelanggan' => 'required',
+        'nama_tim' => 'required',
     ]);
         $pelanggan = new Pelanggan;
         $pelanggan->nama_pelanggan = $request->nama_pelanggan;
         $pelanggan->no_hp = $request->no_hp;
-        $pelanggan->alamat_pelanggan = $request->alamat_pelanggan;
+        $pelanggan->nama_tim = $request->nama_tim;
         $pelanggan->save();
 
         return redirect('/pelanggan');
@@ -73,7 +73,7 @@ class PelangganController extends Controller
         $pelanggan = Pelanggan::find($id);
         $pelanggan->nama_pelanggan = $request->nama_pelanggan;
         $pelanggan->no_hp = $request->no_hp;
-        $pelanggan->alamat_pelanggan = $request->alamat_pelanggan;
+        $pelanggan->nama_tim = $request->nama_tim;
         $pelanggan->save();
 
 
@@ -92,3 +92,4 @@ class PelangganController extends Controller
         return redirect('/pelanggan')->with('success', 'Data berhasil dihapus');
     }
 }
+

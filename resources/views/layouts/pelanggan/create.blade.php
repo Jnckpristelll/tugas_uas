@@ -26,7 +26,7 @@
                                 <div class="mb-3">
                                     <label for="nama" class="form-label">Nama</label>
                                     <input type="text" name="nama_pelanggan" class="form-control" id="nama"
-                                        placeholder="Masukkan nama" required>
+                                        placeholder="Masukkan Nama" required>
                                 </div>
 
                                 <div class="mb-3">
@@ -36,8 +36,8 @@
                                 </div>
 
                                 <div class="mb-4">
-                                    <label for="alamat" class="form-label">Alamat</label>
-                                    <textarea name="alamat_pelanggan" class="form-control" id="alamat" rows="3" placeholder="Masukkan alamat lengkap"
+                                    <label for="nama_tim" class="form-label">Nama Tim</label>
+                                    <textarea name="nama_tim" class="form-control" id="nama_tim" rows="3" placeholder="Masukkan Nama Tim"
                                         required></textarea>
                                 </div>
 
