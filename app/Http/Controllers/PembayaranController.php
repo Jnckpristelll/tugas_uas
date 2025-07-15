@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Pembayaran;
+use App\Models\Pemesanan;
+
 
 class PembayaranController extends Controller
 {
@@ -24,7 +26,8 @@ class PembayaranController extends Controller
     public function create()
     {
         //
-        return view('layouts.pembayaran.create');
+        $pemesanan = Pemesanan::all();
+        return view('layouts.pembayaran.create', compact('pemesanan'));
     }
 
     /**
@@ -34,7 +37,7 @@ class PembayaranController extends Controller
     {
         //
         $request->validate([
-        'id_pemesanan' => 'required|integer',
+        'id_pemesanan' => 'required',
         'tgl_pembayaran' => 'required|date',
         'status_pembayaran' => 'required|in:pending,lunas',
     ]);
@@ -64,8 +67,9 @@ class PembayaranController extends Controller
     public function edit(string $id)
     {
         //
+        $pemesanan = Pemesanan::all();
         $pembayaran = Pembayaran::find($id);
-        return view('layouts.pembayaran.edit',compact('pembayaran'));
+        return view('layouts.pembayaran.edit',compact('pembayaran','pemesanan'));
     }
 
     /**

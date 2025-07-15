@@ -56,7 +56,7 @@ class PemesananController extends Controller
             $pemesanan->jam_selesai = $request->jam_selesai;
             $pemesanan->save();
 
-            Pemesanan::create($request->all());
+            
 
     // Redirect dengan pesan sukses
     return redirect('/pemesanan')->with('success', 'Data pemesanan berhasil ditambahkan.');

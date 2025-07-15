@@ -14,4 +14,9 @@ class Pembayaran extends Model
         'status_pembayaran',
 
     ];
+
+    public function pemesanan()
+        {
+            return $this->hasOne(Pemesanan::class, 'id', 'id_pemesanan');
+        }
 }

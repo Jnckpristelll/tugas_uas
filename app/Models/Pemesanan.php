@@ -21,4 +21,10 @@ class Pemesanan extends Model
         {
             return $this->hasOne(Pelanggan::class, 'id', 'id_pelanggan');
         }
+
+
+    public function pembayaran()
+    {
+        return $this->belongTo(Pembayaran::class);
+    }
 }

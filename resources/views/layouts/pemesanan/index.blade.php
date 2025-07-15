@@ -31,7 +31,8 @@
                             <thead class="table-light">
                                 <tr>
                                     <th>No</th>
-                                    <th>ID Pelanggan</th>
+                                    <th>Nama Pelanggan</th>
+                                    <th>Nama Tim</th>
                                     <th>Tanggal</th>
                                     <th>Status DP</th>
                                     <th>Durasi (Jam)</th>
@@ -44,7 +45,8 @@
                                 @forelse ($pemesanan as $data)
                                     <tr>
                                         <td>{{ $nomor++ }}</td>
-                                        <td>{{ $data->pelanggan->nama }}</td>
+                                        <td>{{ $data->pelanggan->nama_pelanggan }}</td>
+                                        <td>{{ $data->pelanggan->nama_tim }}</td>
                                         <td>{{ $data->tanggal }}</td>
                                         <td>
                                             @if ($data->status_dp == 'sudah dibayar')
